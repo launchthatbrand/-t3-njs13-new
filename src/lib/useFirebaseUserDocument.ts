@@ -14,7 +14,7 @@ export default function useFirebaseDocument() {
     if (!loadingUser && user && db) {
       (async () => {
         const docRef = doc(db, "users", user.uid);
-        const listener = onSnapshot(docRef, (doc) => {
+        const listener = await onSnapshot(docRef, (doc) => {
           if (doc.exists()) {
             setDocument({
               ...doc.data(),
