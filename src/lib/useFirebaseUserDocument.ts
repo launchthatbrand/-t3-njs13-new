@@ -1,4 +1,4 @@
-import { doc, DocumentData, onSnapshot } from "firebase/firestore";
+import { doc, type DocumentData, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import initializeFirebaseClient from "./initFirebase";
 import useFirebaseUser from "./useFirebaseUser";

@@ -1,7 +1,7 @@
 import admin from "firebase-admin";
 import { initializeApp, cert } from "firebase-admin/app";
-import { Auth, getAuth } from "firebase-admin/auth";
-import { Firestore, getFirestore } from "firebase-admin/firestore";
+import { type Auth, getAuth } from "firebase-admin/auth";
+import { type Firestore, getFirestore } from "firebase-admin/firestore";
 
 // Create Server-Side Instance of Firebase
 export default function initializeFirebaseServer(): {

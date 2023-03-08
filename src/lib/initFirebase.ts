@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { Auth, getAuth } from "firebase/auth";
-import { Firestore, getFirestore } from "firebase/firestore";
+import { type Auth, getAuth } from "firebase/auth";
+import { type Firestore, getFirestore } from "firebase/firestore";
 
 // Create Client-Side Instance of Firebase
 export default function initializeFirebaseClient(): {
