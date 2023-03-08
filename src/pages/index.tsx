@@ -11,7 +11,7 @@ import { getDoc, doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { signInWithCustomToken, signOut } from "firebase/auth";
 import initializeFirebaseClient from "../lib/initFirebase";
 import useFirebaseUser from "../lib/useFirebaseUser";
-import useFirebaseDocument from "../lib/useFirebaseUserDocument";
+// import useFirebaseDocument from "../lib/useFirebaseUserDocument";
 
 const Home: NextPage = () => {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
   const address = useAddress();
   const { auth, db } = initializeFirebaseClient();
   const { user, isLoading: loadingAuth } = useFirebaseUser();
-  const { document, isLoading: loadingDocument } = useFirebaseDocument();
+  //const { document, isLoading: loadingDocument } = useFirebaseDocument();
 
   async function signIn() {
     // Use the same address as the one specified in _app.tsx.
@@ -126,9 +126,6 @@ const Home: NextPage = () => {
 
                 <p>
                   <b>Document ID: </b>
-                  {loadingDocument
-                    ? "Loading..."
-                    : document?.id || "No document"}
                 </p>
               </div>
             ) : (
