@@ -8,6 +8,8 @@ const config = {
       files: ["*.ts", "*.tsx"],
       parserOptions: {
         project: "tsconfig.json",
+        tsconfigRootDir: __dirname,
+        sourceType: "module",
       },
     },
   ],
